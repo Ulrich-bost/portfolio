@@ -348,6 +348,14 @@ footer {
   text-align: center;
 }
 
+.slogan {
+  margin: 0.45rem 0 0;
+  color: var(--ink);
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 500;
+}
+
 @media (max-width: 900px) {
   .hero,
   .about-facts,
