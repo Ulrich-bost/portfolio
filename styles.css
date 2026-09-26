@@ -1,0 +1,368 @@
+:root {
+  --ink: #0f172a;
+  --muted: #64748b;
+  --line: #e8e4f4;
+  --purple: #7c3aed;
+  --magenta: #c026d3;
+  --soft: #f4f0ff;
+  --card: #ffffff;
+  --font: Poppins, "Segoe UI", sans-serif;
+  --display: "Space Grotesk", Poppins, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fbfaff;
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--purple);
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 5vw;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--ink);
+  font-family: var(--display);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--purple);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+}
+
+nav a {
+  color: #334155;
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--purple);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 4.5rem 6vw 3.5rem;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(192, 38, 211, 0.16), transparent 28rem),
+    radial-gradient(circle at 80% 10%, rgba(96, 165, 250, 0.28), transparent 26rem),
+    linear-gradient(180deg, #f3e8ff 0%, #eef2ff 55%, #fbfaff 100%);
+}
+
+.avatar {
+  display: block;
+  width: 168px;
+  height: 168px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 8%;
+  box-shadow: 0 0 0 6px #fff, 0 0 0 9px #c026d3;
+}
+
+.hello {
+  margin: 0;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0.15rem 0 0.4rem;
+  max-width: 12ch;
+  color: var(--magenta);
+  font-family: var(--display);
+  font-size: clamp(2.3rem, 5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.lead {
+  max-width: 38rem;
+  margin: 0.7rem 0 0;
+  color: #475569;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.15rem;
+  border: 1px solid var(--purple);
+  border-radius: 10px;
+  background: linear-gradient(90deg, #7c3aed, #9333ea);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: white;
+  filter: brightness(1.05);
+}
+
+.btn-ghost {
+  background: white;
+  color: var(--purple);
+}
+
+.btn-ghost:hover {
+  color: var(--purple);
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stack li {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.08);
+  color: var(--purple);
+  font-family: var(--display);
+  font-weight: 700;
+}
+
+section {
+  width: min(1080px, calc(100% - 2.5rem));
+  margin: 0 auto;
+  padding: 3.2rem 0 0.4rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--purple);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0 0 0.8rem;
+  font-family: var(--display);
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.about-facts,
+.skill-grid ul,
+.work ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  margin-top: 1.3rem;
+}
+
+.about-facts li,
+.skill-grid article,
+.cards article,
+.work article,
+.certs article,
+.contact {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.about-facts li {
+  padding: 0.9rem 1rem;
+}
+
+.about-facts strong {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.skill-grid,
+.cards,
+.work,
+.certs {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.skill-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cards,
+.certs {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.work {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.skill-grid article,
+.cards article,
+.work article,
+.certs article {
+  padding: 1.15rem 1.15rem 1.2rem;
+}
+
+h3 {
+  margin: 0 0 0.7rem;
+  font-family: var(--display);
+  font-size: 1.15rem;
+}
+
+.skill-grid li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.45rem 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+.skill-grid em {
+  color: var(--purple);
+  font-style: normal;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+}
+
+.filters button {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.filters button.is-on {
+  border-color: var(--purple);
+  background: var(--purple);
+  color: white;
+}
+
+.work ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.8rem 0;
+}
+
+.work li {
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--soft);
+  color: #6d28d9;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.work article[hidden] {
+  display: none;
+}
+
+.contact {
+  margin-bottom: 2rem;
+  padding: 1.4rem;
+}
+
+footer {
+  padding: 1.2rem 6vw 1.6rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .about-facts,
+  .skill-grid,
+  .cards,
+  .work,
+  .certs {
+    grid-template-columns: 1fr;
+  }
+
+  .stack {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero {
+    padding: 2.4rem 1.25rem 2rem;
+  }
+}
